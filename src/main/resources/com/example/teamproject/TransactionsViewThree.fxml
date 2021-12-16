@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="root"
+            fx:controller="com.example.teamproject.controller.TransactionsController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+
+    <center>
+
+        <VBox fx:id="tableHolder">
+
+        </VBox>
+
+
+    </center>
+
+    <left>
+        <VBox style="-fx-padding: 0 5 0 5" spacing="10" alignment="CENTER">
+            <Label text="Choose an account in the choice box below" />
+            <HBox spacing="5" alignment="CENTER">
+                <ChoiceBox fx:id="accountChoiceBox" />
+
+
+                <DatePicker fx:id="datePicker" onAction="#datePicked"/>
+
+            </HBox>
+            <TextField fx:id="amountTextField" promptText="Enter amount" />
+            <Button text="Add transaction" onAction="#addTransactionButtonPressed"/>
+
+        </VBox>
+    </left>
+
+
+</BorderPane>
